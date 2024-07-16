@@ -7,18 +7,17 @@
 // @namespace           http://tampermonkey.net/
 // @icon                https://www.google.com/s2/favicons?sz=64&domain=jmanga.org
 // @license             MIT
-// @grant               GM_addStyle
+// @grant               none
 // ==/UserScript==
 
 (function () {
   "use strict";
 
   // UIを非表示
-  GM_addStyle(`
-  .mr-tools.mrt-bottom {
-    display: none !important;
-  }
-`);
+  const mrtBottomElements = document.querySelectorAll(".mr-tools.mrt-bottom");
+  mrtBottomElements.forEach((element) => {
+    element.style.display = "none";
+  });
 
   document.addEventListener("keydown", function (e) {
     if (e.key === "ArrowLeft") {
