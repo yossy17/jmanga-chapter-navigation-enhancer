@@ -10,7 +10,7 @@
 
 ## 貢献
 
-バグの報告や機能の提案は大歓迎です。[問題を報告](https://github.com/yossy17/JManga_Chapter_Navigation_Enhancer/issues)または[プルリクエスト](https://github.com/yossy17/JManga_Chapter_Navigation_Enhancer/pulls)を作成してください。
+バグの報告や機能の提案は大歓迎です。[問題を報告](https://github.com/yossy17/jmanga-chapter-navigation-enhancer/issues)または[プルリクエスト](https://github.com/yossy17/jmanga-chapter-navigation-enhancer/pulls)を作成してください。
 
 ## ライセンス
 
