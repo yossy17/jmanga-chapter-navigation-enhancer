@@ -1,23 +1,25 @@
 // ==UserScript==
 // @name                JManga Chapter Navigation Enhancer
 // @description         左右矢印キーを使用してページチャプターを前後させる
-// @version             1.0.0
-// @author              Yos_sy17
-// @match               https://jmanga.org/*
+// @version             1.1
+// @author              Yos_sy
+// @match               *://*.jmanga.org/*
+// @match               *://*.jmanga.to/*
 // @namespace           http://tampermonkey.net/
 // @icon                https://www.google.com/s2/favicons?sz=64&domain=jmanga.org
 // @license             MIT
-// @grant               none
+// @grant               GM_addStyle
 // ==/UserScript==
 
 (function () {
   "use strict";
 
   // UIを非表示
-  const mrtBottomElements = document.querySelectorAll(".mr-tools.mrt-bottom");
-  mrtBottomElements.forEach((element) => {
-    element.style.display = "none";
-  });
+  GM_addStyle(`
+    .mr-tools.mrt-bottom {
+      display: none !important;
+    }
+  `);
 
   document.addEventListener("keydown", function (e) {
     if (e.key === "ArrowLeft") {
@@ -35,15 +37,3 @@
     }
   });
 })();
-
-// メモ
-// @name:en             JManga Chapter Navigation Enhancer
-// @name:zh-CN          JManga 章节导航增强器
-// @name:ko             JManga 챕터 네비게이션 향상기
-// @name:ru             JManga Навигатор по главам
-// @name:de             JManga Kapitel-Navigation Enhancer
-// @description:en      Use the left and right arrow keys to navigate between chapters
-// @description:zh-CN   使用左右箭头键在章节之间导航
-// @description:ko      좌우 화살표 키를 사용하여 챕터 간 이동
-// @description:ru      Используйте клавиши со стрелками влево и вправо для навигации между главами
-// @description:de      Verwenden Sie die Pfeiltasten nach links und rechts, um zwischen Kapiteln zu navigieren
